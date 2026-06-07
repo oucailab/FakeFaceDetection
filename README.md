@@ -85,8 +85,7 @@ Result: Likely Fake
 
 | 概率范围 | 判断结果 |
 | --- | --- |
-| `0% - 40%` | Likely Real |
-| `40% - 70%` | Uncertain |
+| `0% - 69%` | Likely Real |
 | `70% - 100%` | Likely Fake |
 
 
