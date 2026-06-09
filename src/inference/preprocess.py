@@ -1,3 +1,5 @@
+import os
+
 import numpy as np
 import cv2
 from PIL import Image
@@ -19,11 +21,11 @@ def extract_frames(filename,num_frames,model,image_size=(380,380)):
 	frame_idxs = np.linspace(0, frame_count_org - 1, num_frames, endpoint=True, dtype=int)
 	for cnt_frame in range(frame_count_org): 
 		ret_org, frame_org = cap_org.read()
-		height,width=frame_org.shape[:-1]
+		
 		if not ret_org:
 			tqdm.write('Frame read {} Error! : {}'.format(cnt_frame,os.path.basename(filename)))
 			break
-		
+		height, width = frame_org.shape[:-1]
 		if cnt_frame not in frame_idxs:
 			continue
 
